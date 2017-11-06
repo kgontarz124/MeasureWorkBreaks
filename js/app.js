@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 }
             }
-            breakTime.innerText = "" + minutesDozens + minutesUnity + "." + secondsDozens + secondsUnity;
+            breakTime.innerText = "" + minutesDozens + minutesUnity + ":" + secondsDozens + secondsUnity;
         }, 1000);
     }
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
         clearInterval(timer);
         coffeeSteams.classList.add("unactive");
         coffee.classList.remove("coffee-content-active");
-        breakTime.innerText = "00.00";
+        breakTime.innerText = "00:00";
         timeStart.classList.add("unactive");
         timeStop.classList.add("unactive");
     }
@@ -96,20 +96,26 @@ document.addEventListener("DOMContentLoaded", function() {
     btnStop.addEventListener("click", function() {
         timeOn = !timeOn;
 
-        if(timeOn === false) {
-            timeStop.classList.remove("unactive");
-            timeStop.innerText = new Date().getHours() + ":" + (new Date().getMinutes()<10?'0':'') + new Date().getMinutes();
+        if((timeOn === false) &&
+        (timeStop.getAttribute("class") === "time-stop unactive") &&
+        (timeStart.getAttribute("class") !== "time-start unactive")) {
 
-            clearInterval(timer);
-            coffeeSteams.classList.add("unactive");
-            coffee.classList.remove("coffee-content-active");
-            sum += Number(breakTime.innerText);
+                timeStop.classList.remove("unactive");
+                timeStop.innerText = new Date().getHours() + ":" + (new Date().getMinutes()<10?'0':'') + new Date().getMinutes();
 
-            counter++;
-            var elemOfList = document.createElement("li");
-            elemOfList.innerText = "Break " + counter + " - total time: " + breakTime.innerText + " (" + timeStart.innerText + " - " + timeStop.innerText + " )";
-            listOfBreaks.appendChild(elemOfList);
-            result.innerHTML = "You didn't work <span>" +sum.toFixed(2) + "</span> min today !";
+                clearInterval(timer);
+                coffeeSteams.classList.add("unactive");
+                coffee.classList.remove("coffee-content-active");
+                sum += Number(breakTime.innerText);
+
+                counter++;
+                var elemOfList = document.createElement("li");
+                elemOfList.innerText = "Break " + counter + " - total time: " + breakTime.innerText + " (" + timeStart.innerText + " - " + timeStop.innerText + " )";
+                listOfBreaks.appendChild(elemOfList);
+                result.innerHTML = "You didn't work <span>" +sum.toFixed(2) + "</span> min today !";
+
+
+
 
             if(listOfBreaks.children[0].innerText === "Your list is empty!") {
                 listOfBreaks.removeChild(defautText);

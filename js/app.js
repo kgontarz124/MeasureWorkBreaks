@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var coffeeSteams = document.querySelector(".coffee-steams");
     var coffee= document.querySelector(".coffee");
 
-
     var currentDate = new Date();
     var textTime;
     var timer;
@@ -21,24 +20,23 @@ document.addEventListener("DOMContentLoaded", function() {
     var timeOff = true;
     var sum = 0;
 
-
     //actual-time
     (function() {
-    function leadingZero(i) {
-        return (i < 10) ? "0" + i : i;
-    }
+        function leadingZero(i) {
+            return (i < 10) ? "0" + i : i;
+        }
 
-    function showTextTime() {
-        var textTime = leadingZero(new Date().getHours()) + ":" + leadingZero(new Date().getMinutes()) + ":" + leadingZero(new Date().getSeconds());
-        document.querySelector(".actual-time").innerHTML = textTime;
+        function showTextTime() {
+            var textTime = leadingZero(new Date().getHours()) + ":" + leadingZero(new Date().getMinutes()) + ":" + leadingZero(new Date().getSeconds());
+            document.querySelector(".actual-time").innerHTML = textTime;
 
-        setTimeout(function() {
-            showTextTime()
-        }, 1000);
-    }
+            setTimeout(function() {
+                showTextTime()
+            }, 1000);
+        }
 
-    showTextTime();
-})();
+        showTextTime();
+    })();
 
     //stopper
     function countBreakTime() {

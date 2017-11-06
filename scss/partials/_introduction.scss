@@ -1,0 +1,14 @@
+.box-intro {
+    height: 230px;
+    justify-content: flex-start;
+
+    .intro {
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    span {
+        font-weight: bold;
+        padding-top: 5px;
+    }
+}

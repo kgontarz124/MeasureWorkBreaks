@@ -1,0 +1,23 @@
+@import "partials/_reset.scss";
+@import "_grid.scss";
+@import "modules/_colors.scss";
+@import "modules/_fonts.scss";
+@import "_global_classes.scss";
+@import "partials/_header.scss";
+@import "partials/_introduction.scss";
+@import "partials/_section-measure-break-time.scss";
+@import "partials/_section_day_raport.scss";
+
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-family: 'Molengo', sans-serif;
+    // letter-spacing: 5px;
+}
+
+section {
+    background: $colorPrimary;
+}

@@ -1,0 +1,20 @@
+h1.main-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2.title_1, h2.title_2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2.title_1 {
+    margin-top: 30px;
+}
+
+h2.title_2 {
+    font-size: 2rem;
+    border: 1px solid $colorTertiary;
+}

@@ -1,0 +1,32 @@
+.section-day-raport {
+    .box-of-breaks {
+        border: 1px solid $colorTertiary;
+        width: 700px;
+        text-align: center;
+        margin-top: 30px;
+
+        .list-of-breaks {
+            li {
+                padding: 15px;
+                text-align: center;
+                // border: 1px solid black;
+            }
+        }
+    }
+
+    .btn {
+        display: inline-block;
+        margin: 15px 15px;
+    }
+
+    .result {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        font-weight: bold;
+        font-size: 28px;
+
+        span {
+            color: $colorQuaternary;
+        }
+    }
+}

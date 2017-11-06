@@ -1,0 +1,14 @@
+header {
+    background: $colorPrimary;
+
+    .box-actual-time {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 10px;
+
+        .actual-time {
+            color: $colorQuaternary;
+        }
+    }
+}

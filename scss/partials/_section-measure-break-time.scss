@@ -1,0 +1,132 @@
+.section-measure-break-time {
+    background: $colorQuinary;
+
+    .row {
+        padding-top: 20px;
+
+        .btn-box {
+            height: 350px;
+        }
+
+        .break-box {
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .break-time {
+                font-size: 55px;
+                margin-top: 20px;
+                color: $colorQuaternary;
+            }
+        }
+
+        .coffee-box {
+            height: 350px;
+            justify-content: flex-start;
+
+            .coffee-steams {
+                margin-right: 60px;
+            }
+
+            .coffee-cup {
+                position: relative;
+
+                .sketch {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .coffee-content-active {
+                    position: absolute;
+                    z-index: 1;
+                    background: #6f3826;
+                    width: 177px;
+                    height: 118px;
+                    top: 20px;
+                    left: 8px;
+                    border-bottom-left-radius: 28px;
+                    border-bottom-right-radius: 28px;
+                }
+            }
+
+            .clear {
+                    width: 100px;
+                    margin-top: 20px;
+                    margin-right: 60px;
+            }
+        }
+    }
+}
+
+//animation - coffee -steams
+.coffee-steam1 {
+    animation-name: showCoffeeSteam;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes showCoffeeSteam {
+    0% {opacity:0.3;}
+    50% {opacity:0.6;}
+    100% {opacity:0.2;}
+}
+
+.coffee-steam2 {
+    animation-name: showCoffeeSteam;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes showCoffeeSteam {
+    0% {opacity:0.3;}
+    50% {opacity:0.6;}
+    100% {opacity:0.2;}
+}
+
+.coffee-steam3 {
+    animation-name: showCoffeeSteam;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes showCoffeeSteam {
+    0% {opacity:0.3;}
+    50% {opacity:0.6;}
+    100% {opacity:0.2;}
+}
+
+//animation - coffee content
+.coffee-content-active {
+    animation-name: moveCoffeeContent;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveCoffeeContent {
+    0% {
+        height: 118px;
+        top: 20px;
+    }
+    20% {
+        height: 98px;
+        top: 40px;
+    }
+    40% {
+        height: 78px;
+        top: 60px;
+    }
+    60% {
+        height: 58px;
+        top: 80px;
+    }
+    80% {
+        height: 38px;
+        top: 100px;
+    }
+    100% {
+        height: 9px;
+        top: 129px;
+    }
+}

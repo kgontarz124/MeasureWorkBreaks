@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1040px;
+    border-left: 1px dotted $colorQuaternary;
+    border-right: 1px dotted $colorQuaternary;
+}
+
+.offset-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: 140px;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-family: 'Molengo', sans-serif;
+    font-size: 18px;
+    background: $colorQuaternary;
+    color: $colorQuinary;
+    transition: 1s;
+
+}
+
+.btn:hover {
+    opacity: 0.8;
+    box-shadow: 1px 1px rgba(0,0,0,0.25) inset;
+}
+
+.unactive {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s ease-out;
+}

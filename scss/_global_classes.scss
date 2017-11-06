@@ -4,6 +4,7 @@
     max-width: 1040px;
     border-left: 1px dotted $colorQuaternary;
     border-right: 1px dotted $colorQuaternary;
+    background: $colorPrimary;
 }
 
 .offset-center {
@@ -28,7 +29,7 @@
 }
 
 .btn:hover {
-    opacity: 0.8;
+    opacity: 0.65;
     box-shadow: 1px 1px rgba(0,0,0,0.25) inset;
 }
 

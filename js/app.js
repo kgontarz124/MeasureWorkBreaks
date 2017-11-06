@@ -65,6 +65,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000);
     }
 
+    //reset all
+    function resetAll() {
+        clearInterval(timer);
+        coffeeSteams.classList.add("unactive");
+        coffee.classList.remove("coffee-content-active");
+        breakTime.innerText = "00.00";
+        timeStart.classList.add("unactive");
+        timeStop.classList.add("unactive");
+    }
+
 
     btnStart.addEventListener("click", function() {
         timeOn = !timeOn;
@@ -76,11 +86,10 @@ document.addEventListener("DOMContentLoaded", function() {
             countBreakTime()
             coffeeSteams.classList.remove("unactive");
             coffee.classList.add("coffee-content-active");
+            timeStop.classList.add("unactive");
 
         } else {
-            clearInterval(timer);
-            coffeeSteams.classList.add("unactive");
-            coffee.classList.remove("coffee-content-active");
+            resetAll();
         }
     });
 
@@ -109,12 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     btnClear.addEventListener("click", function() {
-        clearInterval(timer);
-        coffeeSteams.classList.add("unactive");
-        coffee.classList.remove("coffee-content-active");
-        breakTime.innerText = "00.00";
-        timeStart.classList.add("unactive");
-        timeStop.classList.add("unactive");
+        resetAll();
     })
 
     btnClearList.addEventListener("click", function() {

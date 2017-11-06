@@ -129,3 +129,16 @@
         top: 129px;
     }
 }
+
+
+@media screen and (max-width:820px) {
+    .section-measure-break-time {
+        .btn-box, .break-box {
+            max-height: 180px;
+        }
+        .coffee-box  {
+            max-height: 300px;
+        }
+    }
+
+}

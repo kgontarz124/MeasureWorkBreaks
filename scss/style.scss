@@ -17,3 +17,10 @@ html, body {
     font-family: 'Molengo', sans-serif;
     background: $colorTertiary;
 }
+
+//RWD
+@media screen and (max-width:820px) {
+    html, body {
+        font-size: 20px;
+    }
+}

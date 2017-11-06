@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 }
             }
-            breakTime.innerText = "" + minutesDozens + minutesUnity + ":" + secondsDozens + secondsUnity;
+            breakTime.innerText = "" + minutesDozens + minutesUnity + "." + secondsDozens + secondsUnity;
         }, 1000);
     }
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
         clearInterval(timer);
         coffeeSteams.classList.add("unactive");
         coffee.classList.remove("coffee-content-active");
-        breakTime.innerText = "00:00";
+        breakTime.innerText = "00.00";
         timeStart.classList.add("unactive");
         timeStop.classList.add("unactive");
     }
